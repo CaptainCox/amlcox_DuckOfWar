@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 8587288512528955534}
   - component: {fileID: 8587288512528955535}
   - component: {fileID: 8587288512528955533}
+  - component: {fileID: 3660485710552591868}
   m_Layer: 0
   m_Name: DA_PoliceCar
   m_TagString: Shootable
@@ -298,6 +299,21 @@ NavMeshAgent:
   m_BaseOffset: -0.014
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3660485710552591868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8587288512528955531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07143b9fbc6caf45a7985e1a3fe82ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
 --- !u!1 &8587288512622552102
 GameObject:
   m_ObjectHideFlags: 0
