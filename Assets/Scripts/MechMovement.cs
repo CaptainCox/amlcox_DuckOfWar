@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class MechMovement : MonoBehaviour
 {
     public float speed = 50f;
 
+    public Text scoreText;
+    public Text finishText;
+    private int score;
     Vector3 mechMove;
     Rigidbody mechRigid;
     int floorMask;
@@ -15,6 +19,9 @@ public class MechMovement : MonoBehaviour
     void Start()
     {
         mainCamera = FindObjectOfType<Camera>();
+        score = 0;
+        setScore();
+        finishText.text = "";
     }
 
     void Awake()
@@ -49,5 +56,22 @@ public class MechMovement : MonoBehaviour
         mechMove = mechMove.normalized * speed * Time.deltaTime; // making the movement based on speed per second
 
         mechRigid.MovePosition(transform.position + mechMove); // moving the rigid body
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pick Up"))
+        {
+            other.gameObject.SetActive(false);
+            score = score + 1;
+            setScore();
+        }
+    }
+    void setScore()
+    {
+        scoreText.text = "Score: " + score.ToString();
+        if (score >= 16)
+        {
+            finishText.text = "Congratulations! You got all of the pickups!";
+        }
     }
 }

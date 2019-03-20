@@ -62,8 +62,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraRotate.cs" />
     <Compile Include="Assets\Scripts\CarCombat.cs" />
+    <Compile Include="Assets\Scripts\DestroyOverTime.cs" />
     <Compile Include="Assets\Scripts\EnemyCarMove.cs" />
+    <Compile Include="Assets\Scripts\Levitator.cs" />
     <Compile Include="Assets\Scripts\MechMovement.cs" />
+    <Compile Include="Assets\Scripts\PickupEffect.cs" />
     <Compile Include="Assets\Scripts\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\PoliceCarSystem.cs" />
     <None Include="Assets\Simple city plain\Read_me.txt" />
